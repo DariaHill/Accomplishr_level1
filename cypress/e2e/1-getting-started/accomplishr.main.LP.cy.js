@@ -44,7 +44,7 @@ describe("Test goal LP", () => {
 
   it("Switching pages Blogs", () => {
     cy.get(".nav__list a:nth-child(4)").click();
-    cy.url().should("include", "https://staging.accomplishr.com/resources");
+    cy.url().should("include", "https://staging.accomplishr.com/blogs");
   });
 
   it("Login button in header", () => {
@@ -95,6 +95,26 @@ describe("Test goal LP", () => {
     cy.get(
       ".container.w-size-xs.subblock__container .btn.dark-red.small.semi-sharp"
     ).click();
+    cy.url().should("include", "https://staging.accomplishr.com/sign-up");
+  });
+
+  it("Start Earning, Effortlessly", () => {
+    cy.get(".feature__card:nth-child(1) .btn").click();
+    cy.url().should("include", "https://staging.accomplishr.com/sign-up");
+  });
+
+  it("Choose your rates and set...", () => {
+    cy.get(".feature__card:nth-child(2) .btn").click();
+    cy.url().should("include", "https://staging.accomplishr.com/sign-up");
+  });
+
+  it("Share your custom link with your audience", () => {
+    cy.get(".feature__card:nth-child(3) .btn").click();
+    cy.url().should("include", "https://staging.accomplishr.com/sign-up");
+  });
+
+  it("Get booked, give advice virtually", () => {
+    cy.get(".feature__card:nth-child(4) .btn").click();
     cy.url().should("include", "https://staging.accomplishr.com/sign-up");
   });
 
@@ -152,7 +172,7 @@ describe("Test goal LP", () => {
 
   it("Footer Blog", () => {
     cy.get(".block.links .footer__links.f16 a").contains("Blog").click();
-    cy.url().should("include", "https://staging.accomplishr.com/resources");
+    cy.url().should("include", "https://staging.accomplishr.com/blogs");
   });
 
   it("Footer Help Center", () => {

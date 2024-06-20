@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Test goal LP", () => {
+describe("Test member LP", () => {
   beforeEach(() => {
     cy.visit("https://staging.accomplishr.com/for-members");
   });
