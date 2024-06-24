@@ -67,4 +67,9 @@ describe("Test Features page", () => {
       "Yes! People from all over the world will have access to the most in"
     );
   });
+
+  it("Logo click", () => {
+    cy.get(".header.transparent .logo__img").click();
+    cy.url("contain", "https://staging.accomplishr.com/features");
+  });
 });

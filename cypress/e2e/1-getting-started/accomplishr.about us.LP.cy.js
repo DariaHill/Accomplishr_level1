@@ -19,4 +19,9 @@ describe("Test goal LP", () => {
       ".engage.wide.join-team.last .btn.dark-red.small.semi-sharp.join_btn"
     ).click();
   });
+
+  it("Logo click", () => {
+    cy.get(".header.transparent .logo__img").click();
+    cy.url("contain", "https://staging.accomplishr.com/about");
+  });
 });

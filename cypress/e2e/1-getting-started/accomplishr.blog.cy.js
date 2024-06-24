@@ -27,6 +27,11 @@ describe("Test goal LP", () => {
     cy.get(
       ".container.w-size-xs.resource-top-container .btn.dark-red.big.semi-sharp.subscribe-button"
     ).click();
-    /* cy.url().should("include", "https://staging.accomplishr.com/sign-up"); */
+    cy.url().should("include", "https://staging.accomplishr.com/sign-up");
+  });
+
+  it("Logo click", () => {
+    cy.get(".header.transparent .logo__img").click();
+    cy.url("contain", "https://staging.accomplishr.com/blogs");
   });
 });

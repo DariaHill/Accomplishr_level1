@@ -62,7 +62,7 @@ describe("Test goal LP", () => {
   });
 
   it("Join as an expert button on Goal page LP promo", () => {
-    cy.get(".promo__buttons a:first-child").click();
+    cy.get(".promo__buttons .btn.dark-red.large.semi-sharp.info__btn").click();
     /*  cy.wait(4000);
     cy.url().should("include", "https://staging.accomplishr.com/sign-up"); */
   });

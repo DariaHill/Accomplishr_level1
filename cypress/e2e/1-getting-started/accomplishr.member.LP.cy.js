@@ -21,4 +21,9 @@ describe("Test member LP", () => {
     cy.get(".members-hero-wrapper .action-button").click();
     cy.url().should("include", "https://staging.accomplishr.com/sign-up");
   });
+
+  it("Logo click", () => {
+    cy.get(".header.transparent .logo__img").click();
+    cy.url("contain", "https://staging.accomplishr.com/");
+  });
 });
