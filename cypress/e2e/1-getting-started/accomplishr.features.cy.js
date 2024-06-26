@@ -69,7 +69,7 @@ describe("Test Features page", () => {
   });
 
   it("Logo click", () => {
-    cy.get(".header.transparent .logo__img").click();
+    cy.get(".container.w-size-xs.header__wrapper .logo__img").click();
     cy.url("contain", "https://staging.accomplishr.com/features");
   });
 });

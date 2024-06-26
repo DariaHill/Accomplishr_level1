@@ -48,21 +48,19 @@ describe("Test goal LP", () => {
   });
 
   it("Login button in header", () => {
-    cy.get(
-      ".container.w-size-xs.header__wrapper .nav__buttons a:first-child"
-    ).click();
+    cy.get(".container.w-size-xs.header__wrapper .nav__button-signin").click();
     cy.url().should("include", "https://staging.accomplishr.com/sign-in");
   });
 
   it("Sign up button in header", () => {
-    cy.get(
-      ".container.w-size-xs.header__wrapper .nav__buttons a:nth-child(2)"
-    ).click();
+    cy.get(".container.w-size-xs.header__wrapper .btn.dark-red ").click();
     cy.url().should("include", "https://staging.accomplishr.com/sign-up");
   });
 
   it("Join as an expert button on Goal page LP promo", () => {
-    cy.get(".promo__buttons .btn.dark-red.large.semi-sharp.info__btn").click();
+    cy.get(
+      ".container.w-size-xs.promo__wrapper .btn.dark-red.large.semi-sharp.info__btn"
+    ).click();
     /*  cy.wait(4000);
     cy.url().should("include", "https://staging.accomplishr.com/sign-up"); */
   });
@@ -191,5 +189,21 @@ describe("Test goal LP", () => {
       "include",
       "https://staging.accomplishr.com/privacy-policy"
     );
+  });
+
+  it("Twitter", () => {
+    cy.get(".footer__social a:nth-child(1)").click();
+  });
+
+  it("LinkedIn", () => {
+    cy.get(".footer__social a:nth-child(2)").click();
+  });
+
+  it("TikTok", () => {
+    cy.get(".footer__social a:nth-child(3)").click();
+  });
+
+  it("YouTube", () => {
+    cy.get(".footer__social a:nth-child(4)").click();
   });
 });
