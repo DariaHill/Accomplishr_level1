@@ -6,3 +6,5 @@ Cypress.Commands.add("waitForHydration", (timeout = 20_000) => {
     }
   });
 });
+
+import "cypress-file-upload";
